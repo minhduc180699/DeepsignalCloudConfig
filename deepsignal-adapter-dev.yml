@@ -89,7 +89,7 @@ application:
     bootstrap-servers: 192.168.2.141:9092,192.168.2.142:9092,192.168.2.143:9092
     group-id: DS_FILE_UPLOAD_GROUP
     topic-name: ds_file_upload
-    messages-per-request: 10
+    messages-per-request: 15
   external-api:
     bigo-api: http://192.168.9.171
 partner:
