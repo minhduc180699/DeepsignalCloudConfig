@@ -14,6 +14,13 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8061/eureka/
 
+logging:
+  level:
+    ROOT: DEBUG
+    tech.jhipster: DEBUG
+    org.hibernate.SQL: INFO
+    com.saltlux.deepsignal: DEBUG
+
 feign:
   circuitbreaker:
     enabled: true
