@@ -39,4 +39,4 @@ springdoc:
         url: /v3/api-docs/deepsignal-web
       - name: deepsignal-adapter
         url: /v3/api-docs/deepsignal-adapter
-application: gateway4-change
+application: gateway5-change
