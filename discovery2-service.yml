@@ -7,7 +7,7 @@ eureka:
   client:
     # registerWithEureka: false
     # fetchRegistry: false
-    register-with-eureka: true
-    fetch-registry: true
+    register-with-eureka: true #eureka registration
+    fetch-registry: true  #replication
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:8061/eureka/,http://${eureka.instance.hostname}:8062/eureka/
+      defaultZone: http://${eureka.instance.hostname}:8061/eureka/
