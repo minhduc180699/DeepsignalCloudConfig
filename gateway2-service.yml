@@ -4,7 +4,8 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.10.16:8061/eureka/
+      defaultZone: http://localhost:8061/eureka/
+
 spring:
   cloud:
     gateway:
