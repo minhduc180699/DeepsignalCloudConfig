@@ -12,7 +12,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8061/eureka/
+      defaultZone: http://localhost:8061/eureka/,http://localhost:8062/eureka/,http://localhost:8063/eureka/
 
 logging:
   level:
@@ -33,7 +33,7 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mariadb://localhost:3306/deepsignal_tornado?useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mariadb://192.168.10.12:3306/deepsignal_tornado?useLegacyDatetimeCode=false&serverTimezone=UTC
     username: admin
     password: saltlux
     hikari:
