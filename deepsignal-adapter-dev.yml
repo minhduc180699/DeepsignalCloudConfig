@@ -34,8 +34,8 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mariadb://192.168.10.12:3306/deepsignal_tornado?useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: admin
-    password: saltlux
+    username: deepsignal
+    password: elqtlrmsjf!
     hikari:
       poolName: Hikari
       auto-commit: false
