@@ -2,4 +2,4 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://192.168.10.16:8061/eureka/
-fullname: pham minh duc
+fullname: pm duc
