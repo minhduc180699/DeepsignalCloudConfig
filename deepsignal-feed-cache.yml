@@ -4,15 +4,14 @@ eureka:
       defaultZone: http://192.168.10.16:8061/eureka/
 appconfig:
   redis:
-    host:
-    port:
-    password:
-    prefix-cache:
-    expired-time:
+    uri: "redis-sentinel://elqtlrmsjf!@192.168.10.14:6379,192.168.10.15:6379,192.168.10.16:6379"
+    password: elqtlrmsjf!
+    prefix-cache: feed-cache-
+    expired-time: 86400
   searcher:
     service-name: deepsignal-searcher
     port: 8889
-  message-queue:
+  kafka:
     brokers: 192.168.2.141:9092,192.168.2.142:9092,192.168.2.143:9092
     topic: ds-feed-cache-state
     group: FeedCache1
