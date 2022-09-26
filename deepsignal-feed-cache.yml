@@ -4,7 +4,7 @@ eureka:
       defaultZone: http://192.168.10.16:8061/eureka/
 appconfig:
   redis:
-    uri: 192.168.10.14:333
+    uri: 192.168.10.14:6379,192.168.10.15:6379,192.168.10.16:6379
     password: elqtlrmsjf!
     prefix-cache: feed-cache-
     expired-time: 86400
