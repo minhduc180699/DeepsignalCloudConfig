@@ -13,6 +13,12 @@ spring:
         locator:
           enabled: true
       routes:
+      - id: eurekaclient
+        uri: lb://eurekaclient
+        predicates:
+        - Path=/testapis/**
+        filters:
+        - RewritePath=/deepsignal-adapter/(?<path>.*), /$\{path}
       - id: deepsignal-adapter
         uri: lb://deepsignal-adapter
         predicates:
@@ -39,4 +45,6 @@ springdoc:
         url: /v3/api-docs/deepsignal-web
       - name: deepsignal-adapter
         url: /v3/api-docs/deepsignal-adapter
+      - name: eurekaclient
+        url: /v3/api-docs/eurekaclient
 application: gateway5-change
