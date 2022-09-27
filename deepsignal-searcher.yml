@@ -1,9 +1,10 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://125.138.183.126:8761/eureka/,http://192.168.10.16:8061/eureka/
+      defaultZone: http://192.168.10.16:8061/eureka/
   instance:
     preferIpAddress: true
 appconfig:
   elasticsearch:
     nodes: 192.168.9.141:9200,192.168.9.142:9200,192.168.9.143:9200
+  host: ${HOSTNAME}
