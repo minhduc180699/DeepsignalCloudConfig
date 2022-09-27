@@ -24,6 +24,12 @@ spring:
         - Path=/deepsignal-web/**
         filters:
         - RewritePath=/deepsignal-web/(?<path>.*), /$\{path}
+      - id: deepsignal-searcher
+        uri: lb://deepsignal-searcher
+        predicates:
+        - Path=/deepsignal-searcher/**
+        filters:
+        - RewritePath=/deepsignal-searcher/(?<path>.*), /$\{path}
       - id: openapi
         uri: http://localhost:${server.port}
         predicates:
