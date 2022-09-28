@@ -8,3 +8,8 @@ appconfig:
   elasticsearch:
     nodes: 192.168.9.141:9200,192.168.9.142:9200,192.168.9.143:9200
   host: hostname
+spring:
+  sleuth:
+    baggage:
+      remote-fields: Correlation-Id
+      correlation-fields: Correlation-Id

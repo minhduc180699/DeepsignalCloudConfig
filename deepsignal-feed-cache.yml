@@ -20,3 +20,7 @@ spring:
     loadbalancer:
       ribbon:
         enabled: false
+  sleuth:
+    baggage:
+      remote-fields: Correlation-Id
+      correlation-fields: Correlation-Id
