@@ -22,5 +22,5 @@ spring:
         enabled: false
   sleuth:
     baggage:
-      remote-fields: Correlation-Id
-      correlation-fields: Correlation-Id
+      remoteFields: Correlation-Id
+      correlationFields: Correlation-Id
