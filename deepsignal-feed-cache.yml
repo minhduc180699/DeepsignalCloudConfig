@@ -15,3 +15,12 @@ appconfig:
     brokers: 192.168.2.141:9092,192.168.2.142:9092,192.168.2.143:9092
     topic: ds-feed-cache-state
     group: FeedCache1
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+  sleuth:
+    baggage:
+      remoteFields: Correlation-Id
+      correlationFields: Correlation-Id

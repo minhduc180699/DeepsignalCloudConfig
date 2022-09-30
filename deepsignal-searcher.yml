@@ -1,7 +1,15 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.10.16:8061/eureka/,http://125.138.183.126:8761/eureka/
+      defaultZone: http://192.168.10.16:8061/eureka/
+  instance:
+    preferIpAddress: true
 appconfig:
   elasticsearch:
     nodes: 192.168.9.141:9200,192.168.9.142:9200,192.168.9.143:9200
+  host: hostname
+spring:
+  sleuth:
+    baggage:
+      remoteFields: Correlation-Id
+      correlationFields: Correlation-Id
