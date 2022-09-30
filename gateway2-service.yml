@@ -17,8 +17,8 @@ spring:
         uri: lb://eurekaclient
         predicates:
         - Path=/testapis/**
-        filters:
-        - RewritePath=/deepsignal-adapter/(?<path>.*), /$\{path}
+        # filters:
+        # - RewritePath=/deepsignal-adapter/(?<path>.*), /$\{path}
       - id: deepsignal-adapter
         uri: lb://deepsignal-adapter
         predicates:
@@ -46,5 +46,5 @@ springdoc:
       - name: deepsignal-adapter
         url: /v3/api-docs/deepsignal-adapter
       - name: eurekaclient
-        url: /v3/api-docs/eurekaclient
+        url: /swagger-ui/index.html
 application: gateway5-change
