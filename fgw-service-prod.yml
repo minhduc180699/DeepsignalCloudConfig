@@ -26,6 +26,8 @@ spring:
           # - RewritePath=/eurekaclient-service/(?<path>.*), /$\{path}
           - RewritePath=/eurekaclient-service/v3/(?<path>.*), /v3/$\{path}
           # - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+          - RewritePath=/eurekaclient-service/testx, /eurekaclient-service/test2
+      
 
 springdoc:
   swagger-ui:
