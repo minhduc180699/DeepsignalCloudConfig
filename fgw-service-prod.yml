@@ -69,3 +69,5 @@ logging:
     ROOT: INFO
     com.saltlux.deepsignal: INFO
 
+application: test01
+
