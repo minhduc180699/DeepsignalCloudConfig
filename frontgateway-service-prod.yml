@@ -1,0 +1,73 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: openapi
+        uri: http://localhost:${server.port}
+        predicates:
+          - Path=/v3/api-docs/**
+        filters:
+          - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+      - id: feignclient
+        uri: lb://feignclient
+        predicates:
+          - Path=/feignclient/**
+        filters:
+          - RewritePath=/feignclient/(?<path>.*), /feignclient/$\{path}
+      - id: eurekaclient-service
+        uri: lb://eurekaclient-service
+        predicates:
+          - Path=/eurekaclient-service/**
+        filters:
+          - RewritePath=/eurekaclient-service/(?<path>.*), /eurekaclient-service/$\{path}
+          # - RewritePath=/eurekaclient-service/(?<path>.*), /$\{path}
+          - RewritePath=/eurekaclient-service/v3/(?<path>.*), /v3/$\{path}
+          # - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+          - RewritePath=/eurekaclient-service/testx, /eurekaclient-service/test2
+      
+
+springdoc:
+  swagger-ui:
+    urls:
+      - name: eurekaclient-service
+        url: /v3/api-docs/eurekaclient-service
+      - name: feignclient
+        url: /v3/api-docs/feignclient
+
+server:
+  port: 8060
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+
+management:
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true # default: true
+
+# management:
+#   endpoint:
+#     shutdown:
+#       enabled: true
+#   endpoints:
+#     web:
+#       exposure:
+#         include: "*"
+
+logging:
+  level:
+    ROOT: INFO
+    com.saltlux.deepsignal: INFO
+
+application: test01
+
