@@ -38,7 +38,7 @@ springdoc:
         url: /v3/api-docs/feignclient
 
 server:
-  port: 18600
+  port: 18300
 
 eureka:
   client:
