@@ -38,7 +38,7 @@ springdoc:
         url: /v3/api-docs/feignclient
 
 server:
-  port: 18300
+  port: 18400
 
 eureka:
   client:
@@ -68,3 +68,5 @@ logging:
   level:
     ROOT: INFO
     com.saltlux.deepsignal: INFO
+
+
