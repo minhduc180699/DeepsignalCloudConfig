@@ -29,6 +29,7 @@ spring:
           - RewritePath=/eurekaclient-service/testx, /eurekaclient-service/test2
       
 
+
 springdoc:
   swagger-ui:
     urls:
