@@ -21,12 +21,12 @@ spring:
         uri: lb://eurekaclient-service
         predicates:
           - Path=/eurekaclient-service/**
-        filters:
-          - RewritePath=/eurekaclient-service/(?<path>.*), /eurekaclient-service/$\{path}
-          # - RewritePath=/eurekaclient-service/(?<path>.*), /$\{path}
-          - RewritePath=/eurekaclient-service/v3/(?<path>.*), /v3/$\{path}
-          # - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
-          - RewritePath=/eurekaclient-service/testx, /eurekaclient-service/test2
+        # filters:
+        #   - RewritePath=/eurekaclient-service/(?<path>.*), /eurekaclient-service/$\{path}
+        #   # - RewritePath=/eurekaclient-service/(?<path>.*), /$\{path}
+        #   - RewritePath=/eurekaclient-service/v3/(?<path>.*), /v3/$\{path}
+        #   # - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+        #   - RewritePath=/eurekaclient-service/testx, /eurekaclient-service/test2
       
 
 
