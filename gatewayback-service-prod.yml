@@ -42,6 +42,9 @@ server:
   port: 18400
 
 eureka:
+  instance:
+    prefer-ip-address: true
+    # instance-id : ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     serviceUrl:
       defaultZone: http://192.168.10.16:18060/eureka/,http://192.168.9.224:18060/eureka/
