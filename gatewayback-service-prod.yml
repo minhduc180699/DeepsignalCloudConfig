@@ -11,12 +11,21 @@ spring:
           - Path=/v3/api-docs/**
         filters:
           - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+          
       - id: feignclient
         uri: lb://feignclient
         predicates:
           - Path=/feignclient/**
         filters:
           - RewritePath=/feignclient/(?<path>.*), /feignclient/$\{path}
+
+      - id: el-spacycaller
+        uri: lb://el-spacycaller
+        predicates:
+          - Path=/el-spacycaller/**
+        filters:
+          - RewritePath=/el-spacycaller/(?<path>.*), /el-spacycaller/$\{path}
+    
       - id: eurekaclient-service
         uri: lb://eurekaclient-service
         predicates:
