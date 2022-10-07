@@ -21,6 +21,9 @@ spring:
       ribbon:
         enabled: false
   sleuth:
+    enabled: false
     baggage:
       remoteFields: Correlation-Id
       correlationFields: Correlation-Id
+  zipkin:
+    enabled: false
