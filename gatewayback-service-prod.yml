@@ -24,7 +24,7 @@ spring:
         predicates:
           - Path=/el-spacycaller/**
         filters:
-          - RewritePath=/el-spacycaller/(?<path>.*), /el-spacycaller/$\{path}
+          - RewritePath=/el-spacycaller/(?<path>.*), /$\{path}
     
       - id: eurekaclient-service
         uri: lb://eurekaclient-service
