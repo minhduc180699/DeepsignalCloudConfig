@@ -20,7 +20,7 @@ spring:
           - RewritePath=/feignclient/(?<path>.*), /feignclient/$\{path}
 
       - id: el-spacycaller
-        uri: lb://el-spacycaller
+        uri: lb://EL-SPACYCALLER
         predicates:
           - Path=/el-spacycaller/**
         filters:
