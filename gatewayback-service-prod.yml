@@ -25,6 +25,20 @@ spring:
           - Path=/el-spacycaller/**
         filters:
           - RewritePath=/el-spacycaller/(?<path>.*), /$\{path}
+
+      - id: el-dictionary
+        uri: lb://EL-DICTIONARY
+        predicates:
+          - Path=/el-dictionary/**
+        filters:
+          - RewritePath=/el-dictionary/(?<path>.*), /$\{path}
+
+      - id: el-linking
+        uri: lb://EL-LINKING
+        predicates:
+          - Path=/el-linking/**
+        filters:
+          - RewritePath=/el-linking/(?<path>.*), /entity-linking/$\{path}
     
       - id: eurekaclient-service
         uri: lb://eurekaclient-service
