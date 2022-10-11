@@ -8,7 +8,7 @@ appconfig:
     password: elqtlrmsjf!
     feed-prefix-cache: feed-cache-
     feed-content-prefix-cache: feed-content-cache-
-    expired-time: 86400
+    expired-time: 3600
   searcher:
     service-name: deepsignal-searcher
     port: 8889
