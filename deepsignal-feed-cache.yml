@@ -25,3 +25,5 @@ spring:
     baggage:
       remoteFields: Correlation-Id
       correlationFields: Correlation-Id
+  zipkin:
+    baseUrl: http://localhost:9411/zipkin/
