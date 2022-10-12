@@ -25,5 +25,3 @@ spring:
     baggage:
       remoteFields: Correlation-Id
       correlationFields: Correlation-Id
-  zipkin:
-    enabled: false
