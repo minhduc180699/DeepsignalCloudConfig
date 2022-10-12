@@ -21,7 +21,7 @@ spring:
       ribbon:
         enabled: false
   sleuth:
-    enabled: false
+    enabled: true
     baggage:
       remoteFields: Correlation-Id
       correlationFields: Correlation-Id
