@@ -6,12 +6,12 @@ eureka:
     preferIpAddress: true
 spring:
   sleuth:
-    enabled: true
+    enabled: false
     baggage:
       remoteFields: Correlation-Id
       correlationFields: Correlation-Id
   zipkin:
-    enabled: true
+    enabled: false
   cloud:
     loadbalancer:
       ribbon:
