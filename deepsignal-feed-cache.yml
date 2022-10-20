@@ -8,7 +8,7 @@ appconfig:
     password: elqtlrmsjf!
     feed-prefix-cache: feed-cache-
     feed-content-prefix-cache: feed-content-cache-
-    expired-time: 3600
+    expired-time: 86400
   searcher:
     service-name: deepsignal-searcher
     port: 8889
@@ -21,9 +21,10 @@ spring:
       ribbon:
         enabled: false
   sleuth:
-    enabled: true
+    enabled: false
     baggage:
       remoteFields: Correlation-Id
       correlationFields: Correlation-Id
   zipkin:
+    enabled: false
     baseUrl: http://192.168.10.16:9411/zipkin/
