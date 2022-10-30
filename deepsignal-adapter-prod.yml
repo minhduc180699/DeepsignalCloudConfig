@@ -10,7 +10,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8061/eureka/
+      defaultZone: http://192.168.10.16:18060/eureka/,http://192.168.9.224:18060/eureka/
 
 logging:
   level:
@@ -32,9 +32,9 @@ spring:
       enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mariadb://localhost:3306/deepsignal_tornado?useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: admin
-    password: saltlux
+    url: jdbc:mariadb://192.168.10.12:3306/deepsignal_tornado?useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: ds_app
+    password: Ds123!@#
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -120,7 +120,7 @@ application:
     bootstrap-servers: 192.168.2.141:9092,192.168.2.142:9092,192.168.2.143:9092
     group-id: DS_FILE_UPLOAD_GROUP
     topic-name: ds_file_upload
-    messages-per-request: 15
+    messages-per-request: 10
   external-api:
     bigo-api: http://192.168.9.171
 partner:

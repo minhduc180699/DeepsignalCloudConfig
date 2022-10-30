@@ -12,7 +12,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8061/eureka/
+      defaultZone: http://192.168.10.16:18060/eureka/,http://192.168.9.224:18060/eureka/
 
 logging:
   level:
@@ -37,9 +37,9 @@ spring:
     #    url: jdbc:mariadb://192.168.2.141:3306/deepsignal?useLegacyDatetimeCode=false&serverTimezone=UTC
     #    username: root
     #    password: IBgroup!pass
-    url: jdbc:mariadb://13.21.34.43:3306/deepsignal_dev?useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: root
-    password: ceres123
+    url: jdbc:mariadb://192.168.10.12:3306/goover?useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: ds_app
+    password: Ds123!@#
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -113,11 +113,8 @@ jhipster:
   cache: # Cache configuration
     redis: # Redis configuration
       expiration: 3600 # By default objects stay 1 hour (in seconds) in the cache
-      #      server: redis://localhost:6379
-      #      cluster: false
-      #      server: redis://localhost:7000,redis://localhost:7001,redis://localhost:7002
-      server: redis://no-username:elqtlrmsjf!@13.21.34.201:6379
-      cluster: false
+      server: redis://no-username:elqtlrmsjf!@192.168.10.14:6379,redis://192.168.10.15:6379,redis://192.168.10.16:6379
+      cluster: true
   cors:
     # Allow Ionic for JHipster by default (* no longer allowed in Spring Boot 2.4+)
     allowed-origins: 'http://localhost:8100,https://localhost:8100,http://localhost:9000,https://localhost:9000,http://localhost:9060,https://localhost:9060'
@@ -167,15 +164,16 @@ application:
       max-failed-login: 5
       lock-time-duration: 300000 # milliseconds
   files-upload:
-    location: '/Users/thienha/mnt/analytics/deepsignal/download'
+    location: '/opt/deepsignal/download'
     max-size: 10
-    url-file: http://localhost:8080/api/file
+    url-file: http://localhost:18088/api/file
   external-api:
-    deepsignal-adapter: http://localhost:8082/api
+    deepsignal-adapter: http://localhost:18300/deepsignal-adapter/api
     deepsignal-outside: http://192.168.10.12:8080
     deepsignal-file: http://192.168.10.12:8089
     deepsignal-connectome: http://192.168.10.14:8301
     deepsignal-connectome-test: http://192.168.9.183:8301
+    deepsignal-recommendation-test: http://192.168.9.183:8080
     deepsignal-entity-network: http://192.168.10.14:8304
     deepsignal-stock: http://192.168.10.14:8083
     deepsignal-toolbox: http://192.168.10.18:5555
