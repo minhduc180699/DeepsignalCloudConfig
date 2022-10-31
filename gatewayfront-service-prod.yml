@@ -95,3 +95,8 @@ logging:
     ROOT: INFO
     com.saltlux.deepsignal: INFO
 
+gooverauth:
+  secret: goover.ai
+  expiration_minute: 1440   #1440(1day)=60minute*24
+  withsubject: gooverServiceAuth
+  

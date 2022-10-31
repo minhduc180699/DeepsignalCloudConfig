@@ -1,0 +1,54 @@
+
+server:
+  port: 0
+
+spring:
+  application:
+    name: auth-service
+  sleuth: 
+    sampler:
+      probability: 0.05
+  zipkin:
+    base-url: http://192.168.9.224:9411
+
+
+gooverauth:
+  secret: goover.ai
+  expiration_minute: 1440   #1440(1day)=60minute*24
+  withsubject: gooverServiceAuth
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+    #   web:
+    #     cors:
+    #       allowed-methods: GET
+    #       allowed-origins: http://localhost:8060
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id : ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://192.168.10.16:18060/eureka/,http://192.168.9.224:18060/eureka/
+
+logging:
+  level:
+    root: INFO
+    # org.springframework.web: DEBUG
+
+
+# springdoc:
+#   packagesToScan: ai.goover.infra.eurekatest
+
