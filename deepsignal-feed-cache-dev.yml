@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.10.16:8061/eureka/
+      defaultZone: http://192.168.10.16:18060/eureka/,http://192.168.9.224:18060/eureka/
 appconfig:
   redis:
     uri: 192.168.10.14:6379,192.168.10.15:6379,192.168.10.16:6379
@@ -20,11 +20,3 @@ spring:
     loadbalancer:
       ribbon:
         enabled: false
-  sleuth:
-    enabled: false
-    baggage:
-      remoteFields: Correlation-Id
-      correlationFields: Correlation-Id
-  zipkin:
-    enabled: false
-    baseUrl: http://192.168.10.16:9411/zipkin/

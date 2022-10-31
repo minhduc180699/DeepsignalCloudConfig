@@ -1,0 +1,22 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.10.16:18060/eureka/,http://192.168.9.224:18060/eureka/
+appconfig:
+  redis:
+    uri: 192.168.10.14:6379,192.168.10.15:6379,192.168.10.16:6379
+    password: elqtlrmsjf!
+    feed-prefix-cache: feed-cache-
+    feed-content-prefix-cache: feed-content-cache-
+    expired-time: 86400
+  searcher:
+    service-name: deepsignal-searcher
+    port: 8889
+  kafka:
+    brokers: 192.168.2.141:9092,192.168.2.142:9092,192.168.2.143:9092
+    group: FeedCache1
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
