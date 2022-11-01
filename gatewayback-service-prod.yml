@@ -57,6 +57,12 @@ spring:
           - Path=/auth-eurekaclient-service/**
         filters:
           - AuthorizationHeaderFilter
+      
+      - id: auth-service
+        uri: lb://AUTH-SERVICE
+        predicates:
+          - Path=/auth/**
+        
 
 
 springdoc:
