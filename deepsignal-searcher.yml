@@ -5,13 +5,6 @@ eureka:
   instance:
     preferIpAddress: true
 spring:
-  sleuth:
-    enabled: false
-    baggage:
-      remoteFields: Correlation-Id
-      correlationFields: Correlation-Id
-  zipkin:
-    enabled: false
   cloud:
     loadbalancer:
       ribbon:
